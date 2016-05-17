@@ -1,6 +1,6 @@
 # DEPRECATED
 
-Just realized it is basically a copy of [react-css-themr](https://npm.im/react-css-themr)
+Just realized it is basically a copy of [react-css-themr](http://npm.im/react-css-themr)
 
 # themr
 
