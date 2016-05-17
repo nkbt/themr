@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Just realized it is basically a copy of [react-css-themr](https://npm.im/react-css-themr)
+
 # themr
 
 Theming wrapper for React UI libs
