@@ -1,10 +1,8 @@
-# DEPRECATED
-
-Just realized it is basically a copy of [react-css-themr](http://npm.im/react-css-themr)
-
-# themr
+# themr ![DEPRECATED](https://img.shields.io/badge/status-DEPRECATED-red.svg?style=flat-square)
 
 Theming wrapper for React UI libs
+
+After publishing realized it is basically a copy of [react-css-themr](http://npm.im/react-css-themr)
 
 
 ## Usage
