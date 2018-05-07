@@ -1,42 +1,43 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const getDisplayName = ({displayName, name}) => displayName || name || 'Component';
 
 
 export const extendTheme = ({internal, external}) =>
-  Object.keys(internal)
-    .reduce((result, key) => ({
-      ...result,
-      [key]: [internal[key], external[key]].filter(x => x).join(' ')
-    }), {});
+  Object.keys(internal).reduce((result, key) => ({
+    ...result,
+    [key]: [internal[key], external[key]].filter(x => x).join(' ')
+  }), {});
 
 
 export const generatePropTypes = theme =>
-  Object.keys(theme)
-    .reduce((result, key) => ({
-      ...result,
-      [key]: React.PropTypes.string
-    }), {});
+  Object.keys(theme).reduce((result, key) => ({...result, [key]: PropTypes.string}), {});
 
 
-export const themr = (internal, options = {}) => {
-  const propTypes = React.PropTypes.shape(generatePropTypes(internal));
+export const themr = (internal = {}, {override = false} = {}) => {
+  const propTypes = {
+    theme: PropTypes.shape(generatePropTypes(internal))
+  };
+
   const factory = WrappedComponent => {
-    const {override = false} = options;
     const Themed = ({theme: external, ...props}) =>
       React.createElement(WrappedComponent, {
-        ...props,
-        theme: override ? {...internal, ...external} : extendTheme({internal, external})
+        theme: override ?
+          {...internal, ...external} :
+          extendTheme({internal, external}),
+        ...props
       });
 
     Themed.propTypes = propTypes;
+    Themed.defaultProps = {theme: {}};
     Themed.displayName = `Themed(${getDisplayName(WrappedComponent)})`;
 
     return Themed;
   };
 
-  factory.propTypes = propTypes;
+  factory.generatedPropTypes = propTypes;
 
   return factory;
 };

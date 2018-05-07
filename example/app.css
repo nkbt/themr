@@ -1,0 +1,103 @@
+.app {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.app h1 {
+  padding: 0.2em 0 0.7em 0;
+  font-size: 2em;
+}
+
+.app h2 {
+  padding: 0.2em 0 0.7em 0;
+  font-size: 1.6em;
+}
+
+.app h3 {
+  padding: 0.2em 0 0.7em 0;
+  font-size: 1.2em;
+}
+
+.content {
+  padding: 2em;
+}
+
+.content pre {
+  margin-top: 0.5em;
+  font-family: Monospaced, monospace;
+}
+
+.content section {
+  margin: 1em 0;
+}
+
+.header {
+  display: flex;
+  height: 44px;
+  background: #06c;
+  justify-content: space-between;
+}
+
+.nav {
+  margin-left: 36px;
+  line-height: 2em;
+  flex: 1;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.tab {
+  display: inline-block;
+  margin-top: 9px;
+  margin-right: 5px;
+  padding: 0 2em;
+  height: 36px;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 200ms;
+
+}
+
+.tab:hover:not([data-active="true"]) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab[data-active="true"] {
+  background-color: #fff;
+  color: #06c;
+}
+
+.github {
+  float: right;
+}
+
+.link {
+  padding: 0.5em 1em;
+  color: #06c;
+}
+
+.link[data-active="true"] {
+  border: 1px solid #06c;
+}
+
+.button + .button{
+  margin-left: 0.5em;
+}
+
+.button.red {
+  color: red;
+}
+
+.button.green {
+  color: green;
+}
+
+.button.blue {
+  color: blue;
+}
