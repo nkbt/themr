@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nkbt/themr.git"
+    "url": "git@github.com:nkbt/themr.git"
   },
   "keywords": [
     "component",
