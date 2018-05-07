@@ -3,9 +3,9 @@
 Theming wrapper for React UI libs
 
 
-[![CircleCI](https://img.shields.io/circleci/project/@nkbt/themr.svg?style=flat-square)](https://circleci.com/gh/@nkbt/themr)
-[![Dependencies](https://img.shields.io/david/@nkbt/themr.svg?style=flat-square)](https://david-dm.org/@nkbt/themr)
-[![Dev Dependencies](https://img.shields.io/david/dev/@nkbt/themr.svg?style=flat-square)](https://david-dm.org/@nkbt/themr#info=devDependencies)
+[![CircleCI](https://img.shields.io/circleci/project/nkbt/themr.svg?style=flat-square)](https://circleci.com/gh/nkbt/themr)
+[![Dependencies](https://img.shields.io/david/nkbt/themr.svg?style=flat-square)](https://david-dm.org/nkbt/themr)
+[![Dev Dependencies](https://img.shields.io/david/dev/nkbt/themr.svg?style=flat-square)](https://david-dm.org/nkbt/themr#info=devDependencies)
 
 
 ## Installation
@@ -26,15 +26,11 @@ npm install --save @nkbt/themr
 
 ## Demo
 
-```js
-// TODO
-```
+[http://nkbt.github.io/themr](http://nkbt.github.io/themr)
 
 ## Codepen demo
 
-```js
-// TODO
-```
+[http://codepen.io/nkbt/pen/VxrYKq](http://codepen.io/nkbt/pen/VxrYKq?editors=101)
 
 
 ## Usage
