@@ -4,14 +4,14 @@
   "description": "Theming wrapper for React UI libs",
   "main": "lib/index.js",
   "config": {
-    "component": "ReactComponentRouter",
+    "component": "themr",
     "externals": {
       "react": "React",
       "react-dom": "ReactDOM"
     },
     "include": [
-      "https://unpkg.com/react@16.0.0/umd/react.production.min.js",
-      "https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"
+      "https://unpkg.com/react/umd/react.production.min.js",
+      "https://unpkg.com/react-dom/umd/react-dom.production.min.js"
     ]
   },
   "scripts": {

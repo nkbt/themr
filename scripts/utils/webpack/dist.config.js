@@ -8,7 +8,8 @@ const {
   loaders,
   resolve,
   stats,
-  externals
+  externals,
+  plugins
 } = require('./common');
 
 
@@ -25,6 +26,9 @@ module.exports = {
   optimization: {
     minimize: false
   },
+  plugins: [
+    plugins.emptyPropTypes
+  ],
   module: {
     rules: [
       loaders.babelProd
