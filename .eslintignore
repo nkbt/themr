@@ -1,5 +1,6 @@
-example
-lib
-node_modules
-build
-reports
+/node_modules/
+/build/
+/lib/
+/pub/
+/reports/
+/scripts/utils/webpack/babelHelpers.js

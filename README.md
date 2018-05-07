@@ -1,8 +1,45 @@
-# themr ![DEPRECATED](https://img.shields.io/badge/status-DEPRECATED-red.svg?style=flat-square)
+# @nkbt/themr [![npm](https://img.shields.io/npm/v/@nkbt/themr.svg?style=flat-square)](https://www.npmjs.com/package/@nkbt/themr)
 
 Theming wrapper for React UI libs
 
-After publishing realized it is basically a copy of [react-css-themr](http://npm.im/react-css-themr)
+
+[![CircleCI](https://img.shields.io/circleci/project/@nkbt/themr.svg?style=flat-square)](https://circleci.com/gh/@nkbt/themr)
+[![Dependencies](https://img.shields.io/david/@nkbt/themr.svg?style=flat-square)](https://david-dm.org/@nkbt/themr)
+[![Dev Dependencies](https://img.shields.io/david/dev/@nkbt/themr.svg?style=flat-square)](https://david-dm.org/@nkbt/themr#info=devDependencies)
+
+
+## Installation
+
+### NPM
+
+```sh
+npm install --save @nkbt/themr
+```
+
+### 1998 Script Tag:
+```html
+<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/@nkbt/themr/build/themr.min.js"></script>
+(Module exposed as `themr`)
+```
+
+
+## Demo
+
+```js
+// TODO
+```
+
+## Codepen demo
+
+```js
+// TODO
+```
+
+
+## Usage
+
+See [example/App/index.js](example/App/index.js)
 
 
 ## Usage
@@ -27,7 +64,7 @@ const TextWithIcon = ({icon, theme, ...props}) => (
   </div>
 );
 TextWithIcon.propTypes = {
-  theme: React.PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired
 };
 
 
@@ -67,6 +104,38 @@ if `{override: true}` option was used
 </div>
 ```
 
+
+## Development and testing
+
+Currently is being developed and tested with the latest stable `Node` on `OSX`.
+
+To run example covering all `ReactComponentRouter` features, use `yarn start`, which will compile `example/index.js`
+
+```bash
+git clone git@github.com:nkbt/themr.git
+cd themr
+yarn install
+yarn start
+
+# then
+open http://localhost:8080
+```
+
+## Tests
+
+```bash
+# to run ESLint check
+yarn lint
+
+# to run tests
+yarn test
+
+# to run end-to-end tests
+# first, run `selenium/standalone-firefox:3.4.0` docker image
+docker run -p 4444:4444 selenium/standalone-firefox:3.4.0
+# then run test
+yarn e2e
+```
 
 ## License
 
