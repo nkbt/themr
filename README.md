@@ -19,7 +19,7 @@ npm install --save @nkbt/themr
 ### 1998 Script Tag:
 ```html
 <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/@nkbt/themr/build/themr.min.js"></script>
+<script src="https://unpkg.com/@nkbt/themr@1.0.0/build/@nkbt/themr.min.js"></script>
 (Module exposed as `themr`)
 ```
 
