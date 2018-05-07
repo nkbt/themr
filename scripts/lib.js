@@ -2,11 +2,9 @@
 'use strict';
 
 
-const {npm, CWD} = require('./utils/bash');
+const {bash, npm, CWD} = require('./utils/bash');
 
 
 npm('rimraf lib', {cwd: CWD});
-npm('babel src --out-dir lib', {
-  cwd: CWD,
-  env: {NODE_ENV: 'production'}
-});
+bash('mkdir -p lib', {cwd: CWD});
+bash('cp ./src/*.js ./lib/', {cwd: CWD});

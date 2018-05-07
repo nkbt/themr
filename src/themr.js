@@ -1,22 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+'use strict';
+
+
+const React = require('react');
+const PropTypes = require('prop-types');
 
 
 const getDisplayName = ({displayName, name}) => displayName || name || 'Component';
 
 
-export const extendTheme = ({internal, external}) =>
+const extendTheme = ({internal, external}) =>
   Object.keys(internal).reduce((result, key) => ({
     ...result,
     [key]: [internal[key], external[key]].filter(x => x).join(' ')
   }), {});
+exports.extendTheme = extendTheme;
 
 
-export const generatePropTypes = theme =>
+const generatePropTypes = theme =>
   Object.keys(theme).reduce((result, key) => ({...result, [key]: PropTypes.string}), {});
+exports.generatePropTypes = generatePropTypes;
 
 
-export const themr = (internal = {}, {override = false} = {}) => {
+exports.themr = (internal = {}, {override = false} = {}) => {
   const propTypes = {
     theme: PropTypes.shape(generatePropTypes(internal))
   };
