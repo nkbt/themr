@@ -51,6 +51,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 .app {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -154,3 +155,4 @@ table {
 .button.blue {
   color: blue;
 }
+
