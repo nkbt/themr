@@ -1,5 +1,3 @@
-'use strict';
-
 
 const {
   mode,
@@ -13,7 +11,7 @@ const {
 
 module.exports = {
   mode,
-  devtool: '#source-map',
+  devtool: 'eval',
 
   entry: [
     pathTo('example', 'index.js'),

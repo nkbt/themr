@@ -1,15 +1,14 @@
-'use strict';
 
 const {
   mode,
   pathTo,
   PACKAGE_NAME,
   COMPONENT_NAME,
+  plugins,
   loaders,
   resolve,
   stats,
-  externals,
-  plugins
+  externals
 } = require('./common');
 
 
@@ -18,16 +17,14 @@ module.exports = {
   devtool: false,
   entry: pathTo('src', 'index.js'),
   output: {
-    filename: `${PACKAGE_NAME}.js`,
+    filename: `${PACKAGE_NAME}.min.js`,
     path: pathTo('build'),
     library: COMPONENT_NAME,
     libraryTarget: 'umd'
   },
-  optimization: {
-    minimize: false
-  },
   plugins: [
-    plugins.emptyPropTypes
+    plugins.emptyPropTypes,
+    plugins.loaderOptions
   ],
   module: {
     rules: [

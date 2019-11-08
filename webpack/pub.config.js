@@ -1,8 +1,5 @@
-'use strict';
 
-
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
   pathTo,
   plugins,
@@ -28,17 +25,17 @@ module.exports = {
   plugins: [
     plugins.html,
     plugins.include(INCLUDE_JS.concat(['styles.css'])),
-    new ExtractTextPlugin('styles.css')
+    new MiniCssExtractPlugin({filename: 'styles.css'})
   ],
   module: {
     rules: [
       loaders.babel,
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          {loader: 'css-loader'}
+        ]
       }
     ]
   },
