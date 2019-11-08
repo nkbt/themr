@@ -6,7 +6,7 @@ const css = {button: 'button'};
 
 
 const Button = themr(css)(({theme, ...props}) => (
-  <button className={theme.button} {...props} />
+  <button type="button" className={theme.button} {...props} />
 ));
 
 
