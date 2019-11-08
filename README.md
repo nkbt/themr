@@ -19,7 +19,7 @@ npm install --save @nkbt/themr
 ### 1998 Script Tag:
 ```html
 <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/@nkbt/themr@1.0.0/build/@nkbt/themr.min.js"></script>
+<script src="https://unpkg.com/@nkbt/themr/build/@nkbt/themr.min.js"></script>
 (Module exposed as `themr`)
 ```
 
@@ -42,7 +42,7 @@ See [example/App/index.js](example/App/index.js)
 
 
 ### Example of themed UI component
-```jsx
+```js
 import {themr} from 'themr';
 import css from './TextWithIcon.css';
 /*
@@ -68,7 +68,7 @@ export default themr(css, {override: false})(TextWithIcon);
 ```
 
 ### Output
-```
+```js
 import TextWithIcon from './TextWithIcon';
 import css from './Themed.css';
 /*
@@ -125,12 +125,6 @@ yarn lint
 
 # to run tests
 yarn test
-
-# to run end-to-end tests
-# first, run `selenium/standalone-firefox:3.4.0` docker image
-docker run -p 4444:4444 selenium/standalone-firefox:3.4.0
-# then run test
-yarn e2e
 ```
 
 ## License
